@@ -17,7 +17,7 @@ stampa un messaggio appropriato sull’esito del controllo. */
 
 const email = prompt("Scrivi la tua Email")
 
-let presents_list = "";
+let presents_list = false;
 
 // Controlla che sia nella lista di chi può accedere,
 
@@ -25,31 +25,20 @@ for(let i = 0; i < userEmail.length; i++){
 
     const this_email = userEmail[i]
 
-   if(this_email === "user1@gmail.com",
-    "user2@gmail.com",
-    "user3@gmail.com",
-    "user4@gmail.com",
-    "user5@gmail.com",
-    "user6@gmail.com",
-    "user7@gmail.com",
-    "user8@gmail.com")
+   if(this_email === email)
     {
 
-        presents_list = "entra"
+        presents_list = true
 
-   }else if(this_email !== "user1@gmail.com",
-    "user2@gmail.com",
-    "user3@gmail.com",
-    "user4@gmail.com",
-    "user5@gmail.com",
-    "user6@gmail.com",
-    "user7@gmail.com",
-    "user8@gmail.com")
-    {
+   }
+}
 
-        presents_list = "non puoi entra"
-    }
-   
+if(presents_list == true){
+    console.log("Puoi entrare, buon divertimento");
+    
+}else{
+    console.log("Non puoi entrare");
+    
 }
 console.log(presents_list);
 
